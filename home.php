@@ -31,10 +31,14 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-6 d-flex justify-content-center">
-                  <img src="./img/open-form-called.png" alt="Abrir Chamado">
+                  <a href="open-call.php">
+                    <img src="./img/open-form-called.png" alt="Abrir Chamado">
+                  </a>
                 </div>
                 <div class="col-6 d-flex justify-content-center">
-                  <img src="./img/query-form-called.png" alt="Consultar Chamado">
+                  <a href="query-call.php">
+                    <img src="./img/query-form-called.png" alt="Consultar Chamado">
+                  </a>
                 </div>
               </div>
             </div>

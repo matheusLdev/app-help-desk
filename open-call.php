@@ -48,7 +48,7 @@
                     </div>
                     <div class="row mt-4">
                       <div class="col-4">
-                        <button class="btn btn-warning" type="submit">Voltar</button>
+                        <a href="home.php" class="d-block btn btn-warning">Voltar</a>
                       </div>
                       <div class="col-4">
                         <button class="btn btn-info" type="submit">Abrir</button>
