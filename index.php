@@ -31,8 +31,11 @@
                 <div class="form-group my-3">
                   <input type="password" name="password" class="form-control" placeholder="Senha">
                 </div>
-                <?php if(isset($_GET['login']) && $_GET['login'] == 'error') { ?>
+                <?php if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
                   <p class="text-danger">Usuário ou senha inválido(s)</p>
+                <?php } ?>
+                <?php if(isset($_GET['login']) && $_GET['login'] == 'erro2') { ?>
+                  <p class="text-danger">Faça login novamente</p>
                 <?php } ?>
                 <button class="btn btn-info" type="submit">Entrar</button>
               </form>

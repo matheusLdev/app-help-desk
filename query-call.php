@@ -1,3 +1,4 @@
+<?php require_once "access-validator.php"; ?>
 <html lang="PT-BR">
   <head>
     <meta charset="UTF-8">
