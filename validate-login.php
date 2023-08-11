@@ -7,11 +7,11 @@
   foreach($users_app as $user) {
     $authenticated_user = $user['email'] == $_POST['email'] && $user['password'] == $_POST['password'];
     if($authenticated_user) {
-      header('Location: home.php');
       $_SESSION['autenticado'] = 'SIM';
+      header('Location: home.php');
       break;
     } else {
-      $_SESSION['autenticado'] = 'NÃO';
+      $_SESSION['autenticado'] = 'NAO';
       header('Location: index.php?login=erro');
     }
   }

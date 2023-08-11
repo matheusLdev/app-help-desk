@@ -14,9 +14,14 @@
     <header>
       <nav class="navbar navbar-dark bg-dark ps-3">
         <a class="navbar-brand " href="#">
-          <img id="logo" class="d-inline-block align-top" src="./logo.png" alt="Logo">
+          <img id="logo" class="d-inline-block align-top" src="./img/logo.png" alt="Logo">
           <span>Help Desk</span>
         </a>
+        <ul class="navbar-nav pe-3">
+          <li class="nav-item">
+            <a href="logoff.php" class="nav-link">SAIR</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
