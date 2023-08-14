@@ -1,4 +1,15 @@
-<?php require_once "access-validator.php"; ?>
+<?php 
+  require_once "access-validator.php"; 
+  
+  $calls = array();
+  $file_calls = fopen('file-calls.txt', 'r');
+  while(!feof($file_calls)) {
+    $register = fgets($file_calls);
+    $calls[] = $register;
+  }
+  fclose($file_calls);
+?>
+
 <html lang="PT-BR">
   <head>
     <meta charset="UTF-8">
@@ -25,20 +36,21 @@
               <span>Consulta de chamado</span>
             </div>
             <div class="card-body">
+            <?php 
+              foreach($calls as $call) {
+                $call_data = explode(' || ', $call);
+                if(count($call_data) < 3){
+                  continue;
+                }
+            ?>
               <div class="card mb-3 bg-light">
                 <div class="card-body">
-                  <h5 class="card-title">Título do chamado...</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                  <p class="card-text">Descrição do chamado...</p>
+                  <h5 class="card-title"><?=$call_data[0]?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><?=$call_data[1]?></h6>
+                  <p class="card-text"><?=$call_data[2]?></p>
                 </div>
               </div>
-              <div class="card mb-3 bg-light">
-                <div class="card-body">
-                  <h5 class="card-title">Título do chamado...</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                  <p class="card-text">Descrição do chamado...</p>
-                </div>
-              </div>
+            <?php } ?>
               <div class="row mt-4">
                 <div class="col-2">
                   <a href="home.php" class="d-block btn btn-warning">Voltar</a>
