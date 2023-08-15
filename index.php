@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="PT-BR">
   <head>
     <meta charset="UTF-8">

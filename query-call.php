@@ -5,11 +5,20 @@
   $file_calls = fopen('file-calls.txt', 'r');
   while(!feof($file_calls)) {
     $register = fgets($file_calls);
-    $calls[] = $register;
+    $register_details = explode('#', $register); 
+    if($_SESSION['profile_id'] == 2) {
+      if($_SESSION['id'] != $register_details[0]) {
+        continue;
+      } else {
+        $calls[] = $register;
+      } 
+    } else {
+      $calls[] = $register; 
+    }
   }
   fclose($file_calls);
 ?>
-
+<!DOCTYPE html>
 <html lang="PT-BR">
   <head>
     <meta charset="UTF-8">
@@ -22,7 +31,7 @@
   <body>
     <header>
       <nav class="navbar navbar-dark bg-dark ps-3">
-        <a class="navbar-brand " href="#">
+        <a class="navbar-brand " href="home.php">
           <img id="logo" class="d-inline-block align-top" src="./img/logo.png" alt="Logo">
           <span>Help Desk</span>
         </a>
@@ -44,11 +53,6 @@
             <?php 
               foreach($calls as $call) {
                 $call_data = explode('||', $call);
-                if($_SESSION['profile_id'] == 2) {
-                  if($_SESSION['id'] != $call_data[0]) {
-                    continue;
-                  }
-                }
                 if(count($call_data) < 3){
                   continue;
                 }

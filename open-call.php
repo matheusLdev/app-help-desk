@@ -1,4 +1,5 @@
 <?php require_once "access-validator.php"; ?>
+<!DOCTYPE html>
 <html lang="PT-BR">
   <head>
     <meta charset="UTF-8">
@@ -11,7 +12,7 @@
   <body>
     <header>
       <nav class="navbar navbar-dark bg-dark ps-3">
-        <a class="navbar-brand " href="#">
+        <a class="navbar-brand " href="home.php">
           <img id="logo" class="d-inline-block align-top" src="./img/logo.png" alt="Logo">
           <span>Help Desk</span>
         </a>
