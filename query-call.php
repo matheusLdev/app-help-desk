@@ -26,6 +26,11 @@
           <img id="logo" class="d-inline-block align-top" src="./img/logo.png" alt="Logo">
           <span>Help Desk</span>
         </a>
+        <ul class="navbar-nav pe-3">
+          <li class="nav-item">
+            <a href="logoff.php" class="nav-link">SAIR</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="container mt-3">    
@@ -39,6 +44,11 @@
             <?php 
               foreach($calls as $call) {
                 $call_data = explode('||', $call);
+                if($_SESSION['profile_id'] == 2) {
+                  if($_SESSION['id'] != $call_data[0]) {
+                    continue;
+                  }
+                }
                 if(count($call_data) < 3){
                   continue;
                 }
