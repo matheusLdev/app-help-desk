@@ -1,4 +1,4 @@
-HD || Hardware || O hd não funciona.
-Internet || Rede || A internet está caindo o tempo todo.
-Rede || Rede || A rede tá furada.
-Internet || Rede || Os cabos estão arrebentados.
+1 || HD || Hardware || O hd não funciona.
+1 || Internet || Rede || A internet está caindo o tempo todo.
+1 || Rede || Rede || A rede tá furada.
+1 || Internet || Rede || Os cabos estão arrebentados.
